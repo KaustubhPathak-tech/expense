@@ -14,7 +14,7 @@ const Register=()=>{
     const submitHandler=async(values)=>{
         try{
             setLoading(true)
-            await axios.post("/users/register",values);
+            await axios.post("https://expensebackend.vercel.app/api/v1/users/register",values);
             message.success("Registration successful");
             setLoading(false)
             navigate("/login");

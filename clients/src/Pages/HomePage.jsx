@@ -57,12 +57,13 @@ const HomePage = () => {
             try {
                 const user = JSON.parse(localStorage.getItem("user"));
                 setLoading(true);
-                const res = await axios.post("/transactions/get-transaction", {
+                const res = await axios.post("http://localhost:5000/api/v1/transactions/get-transaction", {
                     userid: user._id,
                     frequency,
                     selectedDate,
                     type
                 });
+                console.log(res);
                 setLoading(false);
                 setAllTransaction(res.data);
                 console.log(res.data);
@@ -82,7 +83,7 @@ const HomePage = () => {
         try {
             const user = JSON.parse(localStorage.getItem("user"));
             setLoading(true)
-            await axios.post("/transactions/add-transaction", { ...values, userid: user._id })
+            await axios.post("http://localhost:5000/api/v1/transactions/add-transaction", { ...values, userid: user._id })
             setLoading(false)
             message.success("transaction added successfully");
             setShowModal(false);

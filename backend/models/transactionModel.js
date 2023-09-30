@@ -30,7 +30,7 @@ const transactionSchema=new mongoose.Schema({
         required:[true,"date is required"]
     }
 
-},{timestamps:true})
+})
 
-const transactionModel=mongoose.model("transactions",transactionSchema);
+const transactionModel=mongoose.model("transaction",transactionSchema);
 module.exports=transactionModel;

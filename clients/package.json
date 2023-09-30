@@ -1,5 +1,4 @@
 {
-  "proxy": "https://expensebackend.vercel.app/api/v1",
   "name": "clients",
   "version": "0.1.0",
   "private": true,

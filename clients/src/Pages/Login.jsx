@@ -13,7 +13,7 @@ const Login=()=>{
     const submitHandler=async(values)=>{
         try{
             setLoading(true)
-            const {data}=await axios.post("/users/login",values);
+            const {data}=await axios.post("https://expensebackend.vercel.app/api/v1/users/login",values);
             setLoading(false);
             message.success("login success");
             localStorage.setItem("user",JSON.stringify({...data.user,password:""}));
