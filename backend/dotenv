@@ -1,0 +1,2 @@
+PORT=5000
+MONGO_URL=mongodb+srv://tani:tani1234@cluster0.buqbqui.mongodb.net/expense-management
